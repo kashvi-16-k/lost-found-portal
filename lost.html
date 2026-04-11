@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lost Item</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="navbar">
+    <h1>Lost & Found Portal</h1>
+    <p id="greeting"></p>
+</div>
+<div class="container">
+    <h2>Report Lost Item</h2>
+
+    <input type="text" id="lostItem" placeholder="Item Name (e.g., Black Wallet)" required><br>
+
+    <select id="lostCategory" required>
+        <option value="">Select Category</option>
+        <option>Electronics</option>
+        <option>Stationery</option>
+        <option>ID/Cards</option>
+        <option>Clothing</option>
+        <option>Bags</option>
+        <option>Keys</option>
+        <option>Accessories</option>
+        <option>Other</option>
+    </select><br>
+
+    <textarea id="lostDesc" placeholder="💡 Be as detailed as possible! Include any unique marks, serial numbers, or stickers that can help identify your item." rows="5" required></textarea><br>
+
+    <input type="text" id="lostLocation" placeholder="Last Seen Location (e.g., Library 2nd Floor)" required><br>
+
+    <input type="date" id="lostDate" required><br>
+
+    <input type="tel" id="lostContact" placeholder="Contact Number" required><br>
+
+    <div style="display:flex; justify-content:center; align-items:center; gap:10px;">
+        <input type="file" id="lostImage" accept="image/*">
+        <small>(Optional) Upload a photo</small>
+    </div><br>
+
+    <button onclick="submitLost()">Submit</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
