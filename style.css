@@ -1,0 +1,32 @@
+body {
+    font-family: Arial;
+    background: linear-gradient(to bottom, #d6e6f2, #f5f5dc);
+    text-align: center;
+}
+.container {
+    margin-top: 50px;
+}
+input, textarea {
+    width: 60%;
+    padding: 10px;
+    margin: 10px;
+}
+button {
+    padding: 10px 20px;
+    background: #4a90e2;
+    color: white;
+    border: none;
+    margin: 10px;
+    cursor: pointer;
+}
+.header {
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #4a90e2;
+    color: white;
+}
+.actions {
+    margin-top: 50px;
+}
