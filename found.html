@@ -5,17 +5,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="navbar">
+
+<div class="navbar">
     <h1>Lost & Found Portal</h1>
     <p id="greeting"></p>
 </div>
+
 <div class="container">
     <h2>Report Found Item</h2>
 
-    <input type="text" id="foundItem" placeholder="Item Name (e.g., Blue Backpack)" required><br>
+    <input type="text" id="foundItem" placeholder="Item Name">
 
-    <select id="foundCategory" required>
-        <option value="">Select Category</option>
+    <select>
+        <option>Select Category</option>
         <option>Electronics</option>
         <option>Stationery</option>
         <option>ID/Cards</option>
@@ -24,20 +26,22 @@
         <option>Keys</option>
         <option>Accessories</option>
         <option>Other</option>
-    </select><br>
+    </select>
 
-    <textarea id="foundDesc" rows="5" placeholder="🌟 A photo is the best way to help the owner verify their item. Please keep the item safe until the owner contacts you!" required></textarea><br>
+    <textarea id="foundDesc" placeholder="🌟 A photo helps the owner verify the item. Keep it safe."></textarea>
 
-    <input type="text" id="foundLocation" placeholder="Found At Location (e.g., Cafeteria Table 3)" required><br>
+    <input type="text" placeholder="Found At Location">
+    <input type="date">
+    <input type="tel" placeholder="Contact Number">
 
-    <input type="date" id="foundDate" required><br>
-
-    <input type="tel" id="foundContact" placeholder="Contact Number" required><br>
-
-    <input type="file" id="foundImage" accept="image/*" required><br>
+    <div class="file-row">
+        <input type="file">
+        <span>Upload photo</span>
+    </div>
 
     <button onclick="submitFound()">Submit</button>
 </div>
+
 <script src="script.js"></script>
 </body>
 </html>

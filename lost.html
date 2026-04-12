@@ -5,17 +5,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="navbar">
+
+<div class="navbar">
     <h1>Lost & Found Portal</h1>
     <p id="greeting"></p>
 </div>
+
 <div class="container">
     <h2>Report Lost Item</h2>
 
-    <input type="text" id="lostItem" placeholder="Item Name (e.g., Black Wallet)" required><br>
+    <input type="text" id="lostItem" placeholder="Item Name">
 
-    <select id="lostCategory" required>
-        <option value="">Select Category</option>
+    <select id="lostCategory">
+        <option>Select Category</option>
         <option>Electronics</option>
         <option>Stationery</option>
         <option>ID/Cards</option>
@@ -24,23 +26,22 @@
         <option>Keys</option>
         <option>Accessories</option>
         <option>Other</option>
-    </select><br>
+    </select>
 
-    <textarea id="lostDesc" placeholder="💡 Be as detailed as possible! Include any unique marks, serial numbers, or stickers that can help identify your item." rows="5" required></textarea><br>
+    <textarea id="lostDesc" placeholder="💡 Be as detailed as possible! Include unique marks, serial numbers, or stickers."></textarea>
 
-    <input type="text" id="lostLocation" placeholder="Last Seen Location (e.g., Library 2nd Floor)" required><br>
+    <input type="text" placeholder="Last Seen Location">
+    <input type="date">
+    <input type="tel" placeholder="Contact Number">
 
-    <input type="date" id="lostDate" required><br>
-
-    <input type="tel" id="lostContact" placeholder="Contact Number" required><br>
-
-    <div style="display:flex; justify-content:center; align-items:center; gap:10px;">
-        <input type="file" id="lostImage" accept="image/*">
-        <small>(Optional) Upload a photo</small>
-    </div><br>
+    <div class="file-row">
+        <input type="file">
+        <span>(Optional) Upload photo</span>
+    </div>
 
     <button onclick="submitLost()">Submit</button>
 </div>
+
 <script src="script.js"></script>
 </body>
 </html>
