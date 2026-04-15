@@ -1,50 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Lost &amp; Found Portal</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<div class="navbar">
-    <h1>Lost & Found Portal</h1>
-    <p id="greeting"></p>
-</div>
-
-<div class="cards-container">
-
-    <div class="card">
-        <img src="bottle.jpg" alt="Bottle">
-        <h3>Blue Bottle</h3>
-        <p>Lost at CL 603</p>
+    <div class="navbar">
+        <h1>Lost &amp; Found Portal</h1>
+        <div class="nav-user">
+            <span>Sunita Shukla</span>
+            <button onclick="localStorage.removeItem('user'); location.href='login.html';">Logout</button>
+        </div>
     </div>
 
-    <div class="card">
-        <img src="keychain.jpg" alt="Keychain">
-        <h3>Keychain</h3>
-        <p>Lost at Room 101</p>
+    <div class="page-shell">
+        <div class="welcome-box">
+            <h2>Welcome back, Sunita</h2>
+            <p>View lost and found items reported on campus.</p>
+        </div>
+
+        <div class="top-controls">
+            <input type="text" placeholder="Search lost items...">
+            <div class="filter-row">
+                <button>All</button>
+                <button>Lost</button>
+                <button>Found</button>
+            </div>
+        </div>
+
+        <div class="cards-container">
+            <div class="card">
+                <img src="https://placehold.co/600x420/e7edeb/4f6d7a?text=Bottle" alt="Bottle">
+                <div class="card-body">
+                    <h3>Blue Bottle</h3>
+                    <p>Lost at CL 603</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://placehold.co/600x420/edf1ef/d08c60?text=Wallet" alt="Wallet">
+                <div class="card-body">
+                    <h3>Brown Wallet</h3>
+                    <p>Lost at Library</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://placehold.co/600x420/e6ece8/4f6d7a?text=ID+Card" alt="ID card">
+                <div class="card-body">
+                    <h3>ID Card</h3>
+                    <p>Found at Cafeteria</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://placehold.co/600x420/f0f3f1/d08c60?text=Keys" alt="Keys">
+                <div class="card-body">
+                    <h3>Keys</h3>
+                    <p>Found at Room 101</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://placehold.co/600x420/e8eeea/4f6d7a?text=Notebook" alt="Notebook">
+                <div class="card-body">
+                    <h3>Notebook</h3>
+                    <p>Lost at Seminar Hall</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://placehold.co/600x420/edf2ef/d08c60?text=Earbuds" alt="Earbuds">
+                <div class="card-body">
+                    <h3>Earbuds</h3>
+                    <p>Found at Lab 2</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button onclick="location.href='lost.html'">Report Lost Item</button>
+            <button onclick="location.href='found.html'">Report Found Item</button>
+            <button onclick="location.href='activity.html'">My Activity</button>
+        </div>
     </div>
 
-    <div class="card">
-        <img src="wallet.jpg" alt="Wallet">
-        <h3>Wallet</h3>
-        <p>Lost at Library</p>
-    </div>
-
-    <div class="card">
-        <img src="card.jpg" alt="Bag">
-        <h3>ID card</h3>
-        <p>Lost at Cafeteria</p>
-    </div>
-
-</div>
-
-<div class="actions">
-    <button onclick="location.href='lost.html'">Lost an Item</button>
-    <button onclick="location.href='found.html'">Found an Item</button>
-    <button onclick="location.href='activity.html'">My Activity</button>
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
