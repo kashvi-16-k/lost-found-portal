@@ -1,0 +1,27 @@
+{
+  "name": "lost-found-portal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kashvi-16-k/lost-found-portal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kashvi-16-k/lost-found-portal/issues"
+  },
+  "homepage": "https://github.com/kashvi-16-k/lost-found-portal#readme",
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "mysql2": "^3.22.0",
+    "sqlite3": "^6.0.1"
+  }
+}

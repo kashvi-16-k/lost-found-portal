@@ -60,3 +60,44 @@ window.onload = function () {
         });
     }
 };
+document.getElementById("lostForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const item = document.getElementById("item").value;
+    const description = document.getElementById("desc").value;
+    const location = document.getElementById("location").value;
+
+    fetch("http://localhost:5000/addLost", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            item: item,
+            description: description,
+            location: location
+        })
+    })
+    .then(res => res.text())
+    .then(data => {
+        alert("Item added successfully!");
+    });
+});
+fetch("http://localhost:5000/getLostItems")
+.then(res => res.json())
+.then(data => {
+    const container = document.getElementById("items");
+
+    data.forEach(item => {
+        const div = document.createElement("div");
+
+        div.innerHTML = `
+            <h3>${item.item_name}</h3>
+            <p>${item.description}</p>
+            <p><b>Location:</b> ${item.location}</p>
+            <hr>
+        `;
+
+        container.appendChild(div);
+    });
+});
