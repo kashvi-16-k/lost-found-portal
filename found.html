@@ -1,56 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Found Item</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Found Item</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<div class="navbar">
-    <h1>Lost & Found Portal</h1>
-    <p id="greeting"></p>
-</div>
-
-<div class="container">
-    <form id="foundForm" class="container">
-
-    <h2>Report Found Item</h2>
-
-    <input type="text" id="foundItem" placeholder="Item Name" required>
-
-    <select id="foundCategory" required>
-        <option value="">Select Category</option>
-        <option>Electronics</option>
-        <option>Stationery</option>
-        <option>ID/Cards</option>
-        <option>Clothing</option>
-        <option>Bags</option>
-        <option>Keys</option>
-        <option>Accessories</option>
-        <option>Other</option>
-    </select>
-
-    <textarea id="foundDesc"
-        placeholder="🌟 A photo helps the owner verify the item. Keep it safe."
-        required></textarea>
-
-    <input type="text" id="foundLocation" placeholder="Found At Location" required>
-
-    <input type="date" id="foundDate" required>
-
-    <input type="tel" id="foundPhone" maxlength="10"
-        placeholder="Contact Number (10 digits)" required>
-
-    <div class="file-row">
-        <input type="file" id="foundImage">
-        <span>Upload photo</span>
+    <div class="navbar">
+        <h1>Lost &amp; Found Portal</h1>
+        <div class="right-section">
+            <p id="greeting"></p>
+            <button onclick="location.href='dashboard.html';">Dashboard</button>
+        </div>
     </div>
 
-    <!-- IMPORTANT: type="button" -->
-    <button type="button" onclick="submitFound()">Submit</button>
+    <div class="container">
+        <form id="foundForm">
+            <h2>Report Found Item</h2>
+            <p class="form-note">Enter the same item name to update a lost item as found on the dashboard.</p>
 
-</form>
+            <input type="text" id="foundItem" placeholder="Item Name" required>
 
-<script src="script.js"></script>
+            <select id="foundCategory" required>
+                <option value="">Select Category</option>
+                <option>Electronics</option>
+                <option>Stationery</option>
+                <option>ID/Cards</option>
+                <option>Clothing</option>
+                <option>Bags</option>
+                <option>Keys</option>
+                <option>Accessories</option>
+                <option>Other</option>
+            </select>
+
+            <textarea id="foundDesc" placeholder="Enter short description" required></textarea>
+            <input type="text" id="foundLocation" placeholder="Found At Location" required>
+            <input type="date" id="foundDate" required>
+            <input type="tel" id="foundPhone" maxlength="10" placeholder="Contact Number" required>
+            <div class="file-row">
+                <input type="file" id="foundImage">
+                <span>Upload photo</span>
+            </div>
+            <button type="button" onclick="submitFound()">Submit</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <h1>Lost &amp; Found Portal</h1>
+        <div class="right-section">
+            <p id="greeting"></p>
+            <button onclick="location.href='dashboard.html';">Dashboard</button>
+        </div>
+    </div>
+
+    <div class="details-card">
+        <img id="detailImage" src="bottle.jpg" alt="Item image">
+        <div class="details-content">
+            <h2 id="detailName">Item Name</h2>
+            <p><b>Status:</b> <span id="detailStatus"></span></p>
+            <p><b>Description:</b> <span id="detailDescription"></span></p>
+            <p><b>Contact Number:</b> <span id="detailContact"></span></p>
+            <p><b>Location:</b> <span id="detailLocation"></span></p>
+            <p><b>Reported By:</b> <span id="detailPerson"></span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

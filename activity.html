@@ -1,48 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Activity</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<div class="navbar">
-    <h1>Lost & Found Portal</h1>
-    <p id="greeting"></p>
-</div>
-
-<div class="account-wrapper">
-
-    <div class="profile-card">
-        <div>
-            <h2>kashvi k</h2>
-            <p>SAP ID: 70102500039</p>
-        </div>
-        <div class="avatar">👤</div>
-    </div>
-
-    <div class="activity-box">
-        <h2>My Activity</h2>
-
-        <div class="activity-grid">
-
-            <div class="activity-card">
-                <h3>Lost</h3>
-                <p><b>Item:</b> Wallet</p>
-                <p>Black leather wallet</p>
-            </div>
-
-            <div class="activity-card">
-                <h3>Found</h3>
-                <p><b>Item:</b> Bottle</p>
-                <p>Blue bottle near cafeteria</p>
-            </div>
-
+    <div class="navbar">
+        <h1>Lost &amp; Found Portal</h1>
+        <div class="right-section">
+            <p id="greeting"></p>
+            <button onclick="location.href='dashboard.html';">Dashboard</button>
         </div>
     </div>
 
-</div>
+    <div class="account-wrapper">
+        <div class="activity-box">
+            <h2>My Activity</h2>
+            <div class="user-details activity-header">
+                <p><b>Name:</b> <span id="activityUserName">Student</span></p>
+                <p><b>SAP ID:</b> <span id="activityUserSap">Not available</span></p>
+            </div>
 
-<script src="script.js"></script>
+            <table class="activity-table">
+                <thead>
+                    <tr>
+                        <th>Lost Items</th>
+                        <th>Found Items</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="lostActivityList"></td>
+                        <td id="foundActivityList"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
