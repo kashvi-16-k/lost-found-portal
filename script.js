@@ -443,3 +443,84 @@ document.addEventListener("DOMContentLoaded", function () {
     renderItemDetails();
     loadActivity();
 });
+document.addEventListener("DOMContentLoaded", function() {
+
+  const btn = document.querySelector("button");
+
+  if(btn){
+    btn.addEventListener("click", function(e) {
+      e.preventDefault();
+
+      const item = document.getElementById("item")?.value;
+      const description = document.getElementById("description")?.value;
+      const location = document.getElementById("location")?.value;
+
+      fetch("http://localhost:5000/addLost", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          item: item,
+          description: description,
+          location: location
+        })
+      })
+      .then(res => res.text())
+      .then(data => alert(data))
+      .catch(err => console.log(err));
+    });
+  }
+
+});
+if (document.getElementById("items")) {
+
+  fetch("http://localhost:5000/getLostItems")
+    .then(res => res.json())
+    .then(data => {
+
+      const container = document.getElementById("items");
+      container.innerHTML = "";
+
+      data.forEach(item => {
+
+        const div = document.createElement("div");
+
+        div.innerHTML = `
+          <h3>${item.item_name}</h3>
+          <p>${item.description}</p>
+          <p>${item.location}</p>
+          <hr>
+        `;
+
+        container.appendChild(div);
+      });
+
+    })
+    .catch(err => console.log(err));
+}
+if (document.getElementById("lostActivityList")) {
+
+  fetch("http://localhost:5000/getLostItems")
+    .then(res => res.json())
+    .then(data => {
+
+      const container = document.getElementById("lostActivityList");
+      container.innerHTML = "";
+
+      data.forEach(item => {
+
+        const p = document.createElement("p");
+
+        p.innerHTML = `
+          <b>${item.item_name}</b><br>
+          ${item.description}<br>
+          ${item.location}
+        `;
+
+        container.appendChild(p);
+      });
+
+    })
+    .catch(err => console.log(err));
+}
