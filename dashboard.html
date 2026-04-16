@@ -15,65 +15,59 @@
         <button onclick="localStorage.removeItem('user'); location.href='login.html';">Logout</button>
     </div>
 </div>
-
     <div class="page-shell">
         <div class="welcome-box">
-            <h2>Welcome back, kashvi k</h2>
+            <h2 id="welcomeText">Welcome back</h2>
             <p>View lost and found items reported on campus.</p>
         </div>
 
         <div class="top-controls">
             <input type="text" placeholder="Search lost items...">
-            <div class="filter-row">
-                <button>All</button>
-                <button>Lost</button>
-                <button>Found</button>
-            </div>
         </div>
         <div class="actions">
-    <button onclick="location.href='lost.html'">Lost an Item</button>
-    <button onclick="location.href='found.html'">Found an Item</button>
-    <button onclick="location.href='activity.html'">My Activity</button>
+            <button onclick="location.href='lost.html'">Lost an Item</button>
+            <button onclick="location.href='found.html'">Found an Item</button>
+            <button onclick="location.href='activity.html'">My Activity</button>
+        </div>
+    <br><hr><br>
+    <div class="cards-container">
+        <div class="card">
+            <img src="bottle.jpg">
+            <h3>Blue Bottle</h3>
+            <p>Lost at CL 603</p>
+        </div>
+
+        <div class="card">
+            <img src="keychain.jpg">
+            <h3>Keychain</h3>
+            <p>Lost at Room 101</p>
+        </div>
+
+        <div class="card">
+            <img src="wallet.jpg">
+            <h3>Wallet</h3>
+            <p>Lost at Library</p>
+        </div>
+
+        <div class="card">
+            <img src="card.jpg">
+            <h3>ID card</h3>
+            <p>Lost at Cafeteria</p>
+        </div>
+
+        <div class="card">
+            <img src="earbuds.jpg">
+            <h3>earbuds</h3>
+            <p>Lost at mini auditorium</p>
+        </div>
+
+        <div class="card">
+            <img src="zipper.jpg">
+            <h3>zipper</h3>
+            <p>Lost at library</p>
+        </div>
+    </div>
 </div>
-
-<div class="cards-container">
-    <div class="card">
-        <img src="bottle.jpg">
-        <h3>Blue Bottle</h3>
-        <p>Lost at CL 603</p>
-    </div>
-
-    <div class="card">
-        <img src="keychain.jpg">
-        <h3>Keychain</h3>
-        <p>Lost at Room 101</p>
-    </div>
-
-    <div class="card">
-        <img src="wallet.jpg">
-        <h3>Wallet</h3>
-        <p>Lost at Library</p>
-    </div>
-
-    <div class="card">
-        <img src="card.jpg">
-        <h3>ID card</h3>
-        <p>Lost at Cafeteria</p>
-    </div>
-
-    <div class="card">
-        <img src="earbuds.jpg">
-        <h3>earbuds</h3>
-        <p>Lost at mini auditorium</p>
-    </div>
-
-    <div class="card">
-        <img src="zipper.jpg">
-        <h3>zipper</h3>
-        <p>Lost at library</p>
-    </div>
-</div>
-
 <script src="script.js"></script>
 </body>
 </html>

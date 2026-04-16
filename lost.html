@@ -12,12 +12,14 @@
 </div>
 
 <div class="container">
+    <form id="lostForm" class="container">
+
     <h2>Report Lost Item</h2>
 
-    <input type="text" id="lostItem" placeholder="Item Name">
+    <input type="text" id="lostItem" placeholder="Item Name" required>
 
-    <select id="lostCategory">
-        <option>Select Category</option>
+    <select id="lostCategory" required>
+        <option value="">Select Category</option>
         <option>Electronics</option>
         <option>Stationery</option>
         <option>ID/Cards</option>
@@ -28,19 +30,26 @@
         <option>Other</option>
     </select>
 
-    <textarea id="lostDesc" placeholder="💡 Be as detailed as possible! Include unique marks, serial numbers, or stickers."></textarea>
+    <textarea id="lostDesc"
+        placeholder="💡 Be as detailed as possible! Include unique marks, serial numbers, or stickers."
+        required></textarea>
 
-    <input type="text" placeholder="Last Seen Location">
-    <input type="date">
-    <input type="tel" placeholder="Contact Number">
+    <input type="text" id="lostLocation" placeholder="Last Seen Location" required>
+
+    <input type="date" id="lostDate" required>
+
+    <input type="tel" id="lostPhone" maxlength="10"
+        placeholder="Contact Number (10 digits)" required>
 
     <div class="file-row">
-        <input type="file">
+        <input type="file" id="lostImage">
         <span>(Optional) Upload photo</span>
     </div>
 
-    <button onclick="submitLost()">Submit</button>
-</div>
+    <!-- IMPORTANT -->
+    <button type="button" onclick="submitLost()">Submit</button>
+
+</form>
 
 <script src="script.js"></script>
 </body>
